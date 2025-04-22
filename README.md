@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Cursor + Figma-Context-MCP + Github MCP 实现前端页面和代码提交
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. 设计图预览
 
-## Available Scripts
+![figma](assets/figma.jpg)
 
-In the project directory, you can run:
+## 2. 配置 MCP
 
-### `npm start`
+需申请 `token`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```json
+{
+  "mcpServers": {
+    "Figma AI Bridge": {
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp", "--stdio"],
+      "env": {
+        "FIGMA_API_KEY": ""
+      },
+      "fromGalleryId": "GLips.Figma-Context-MCP"
+    },
+    "GitHub": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+      },
+      "fromGalleryId": "modelcontextprotocol.servers_github"
+    }
+  }
+}
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 3. 粘贴 figma 路径并执行
 
-### `npm test`
+![copylink](assets/copylink.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4. LLM 对话执行
 
-### `npm run build`
+## 5. 执行结束后运行
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm i && npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 6. 实现效果
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![demo-1](assets/demo-1.jpg)
 
-### `npm run eject`
+![demo-2](assets/demo-2.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 7. 一些感想
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 前后时间从执行到结束差不多 `15min`
+- 除了图表，其他还原度我认为可以给到 `99%`
+- 头麻
+- 想想失业了干点啥
