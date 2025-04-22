@@ -1,5 +1,9 @@
 # Cursor + Figma-Context-MCP + Github MCP 实现前端页面和代码提交
 
+## 写在前面（重要）
+
+仅作为技术实现和 MCP 工作流的记录，项目本身不重要
+
 ## 1. 设计图预览
 
 ![figma](assets/figma.jpg)
